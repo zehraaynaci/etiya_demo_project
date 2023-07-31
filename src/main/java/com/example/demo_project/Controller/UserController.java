@@ -1,6 +1,7 @@
 package com.example.demo_project.Controller;
 
 import com.example.demo_project.DTOs.User;
+import com.example.demo_project.Exceptions.BusinessValidationException;
 import com.example.demo_project.Request.CreateUserRequest;
 import com.example.demo_project.Request.InquireUserRequest;
 import com.example.demo_project.Services.UserService;
@@ -17,7 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/gokce")
 public class UserController {
-//
+
+//delete,save,...
     private final UserService userService;
 
     public UserController(UserService userService) {
@@ -30,14 +32,9 @@ public class UserController {
     }
 
     @PostMapping("/createUser")
-    public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
+    public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) throws BusinessValidationException {
         return ResponseEntity.ok(userService.createUser(createUserRequest));
     }
-
-
-
-
-
 
 
 }

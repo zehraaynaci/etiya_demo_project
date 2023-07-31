@@ -7,11 +7,8 @@ import java.util.List;
 @Entity
 @Table(name = "gnl_st")
 public class GnlStEntity extends BaseEntity {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-    @Column(name = "gnl_st_id")
     private Long gnlStId;
 
     //mapped by içine yazdıklarım uyanlış olabilir???

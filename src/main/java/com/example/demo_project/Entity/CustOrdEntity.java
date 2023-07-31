@@ -5,7 +5,6 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "cust_ord")
 public class CustOrdEntity extends BaseEntity{
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long custOrdId;

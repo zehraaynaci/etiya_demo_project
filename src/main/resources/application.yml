@@ -5,8 +5,6 @@ spring:
     password: zg1967
     driverClassName: org.postgresql.Driver
   jpa:
-    hibernate:
-      ddlAuto: create
     showSql: true
     properties:
       hibernate:
