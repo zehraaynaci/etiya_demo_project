@@ -51,7 +51,7 @@ public class UserService {
   /*
     @GetMapping("/users/{id}")
     public User getUser(@PathVariable Long userId) {
-        User user = service.getUser(userId);
+        User user = Service.getUser(userId);
         if (user == null) {
             throw new UserNotFoundException("User not found, UserId: " + UserId);
         }
